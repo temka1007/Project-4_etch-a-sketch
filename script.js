@@ -1,19 +1,18 @@
+const body = document.querySelector("body");
+
 function initGame() {
-    const mapSize = 16;
-    const createCell = 16;
+    const cellNumber = 16*16; 
 
-    for(let x = 0; x < mapSize; x++) {
-        $(document.body).append("<div>");
+    for(let i = 0; i < cellNumber; i++) {
+        const cell = document.createElement("div");
+    
+        cell.classList.add("cell");
 
-        for(let y = 0; y < mapSize; y++) {
-            createCell(x, y);
-        }
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = "red";
+        })
 
-        $(document.body).append("</div>");
+        body.appendChild(cell);
     }
-};
-
-function createCell(x, y) {
-    const cellDiv = $("<div></div>")
 }
 
