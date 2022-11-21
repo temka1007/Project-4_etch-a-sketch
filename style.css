@@ -1,5 +1,5 @@
 * {
-    
+    border: 1px solid red;
     margin: 0px;
     padding: 0px;
 }
@@ -8,6 +8,7 @@ body{
     margin: 150px;
     grid-template-columns: repeat(16, 30px);
     justify-content: center;
+    background-color: #000000ea;
 
 }
 .cell {
