@@ -1,23 +1,149 @@
 * {
-    border: 1px solid red;
     margin: 0px;
     padding: 0px;
 }
 body{
+    margin: 90px 300px 90px 300px;
+    background-color: #181818ea;
+}
+main {
+    display: flex;
+    padding: 15px;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: #363636ef;
+    box-shadow: rgba(0, 0, 0, 0.712) 0px 3px 8px;
+}
+.control-panel-container {
+    background-color: rgb(175, 175, 175);
+    margin-right: 15px;
+    width: 230px;
+    border-radius: 10px;
+    
+}
+.sketch.container{
+    height: 600px;
+    width: 600px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.sketch {
+    height:100%;
+    background-color: rgb(122, 122, 122);
+}
+.color {
+    height: 20px;
+    width: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.color-container {
+    margin: 10px;
+    padding: 20px;
     display: grid;
-    margin: 150px;
-    grid-template-columns: repeat(16, 30px);
+    grid-template-columns: repeat(4, 20px);
     justify-content: center;
-    background-color: #000000ea;
+    grid-gap: 30px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.white {
+    grid-column: 2 / 3;
+}
+.control-panel {
+    margin: 10px;
+    padding: 5px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.line {
+    margin: 10px;
+    height: 1px;
+    background-color: black;
+    width: 210px;
+    margin-top: 15px;
+    margin-bottom: 34px;
+}
+.clear.btn {
+    margin: 0px 10px 0px 10px;
+    height: 55px;
+    width: 210px;
+    cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
 
 }
-.cell {
-    height: 30px;
-    width: 30px;
-    border: 1px solid rgb(117, 117, 255);
-    background-color: aquamarine;
-    transition: transform 1s;
+.pixal-changer {
+    display: flex; 
+    justify-content: center;
 }
- /* .cell:hover {
+.enter {
+    cursor: pointer;
+    width: 160px;
+    height: 40px;
+    margin-left: 5px;
+}
+input {
+    margin-right: 5px;
+    width: 37px;
+    height: 36px;
+}
+.backgroundColor {
+    cursor: pointer;
+    height: 40px;
+}
+.penColor {
+    cursor: pointer;
+    height: 40px;
+}
+.eraser {
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.yellow {
     background-color: yellow;
+}
+.yellow-orange {
+    background-color: #FFAE42;
+}
+.orange {
+    background-color: orange;
+}
+.red-orange {
+    background-color: #FF5349;
+}
+.red {
+    background-color: red;
+}
+.red-violet {
+    background-color: #F6358A;
+}
+.violet {
+    background-color: violet;
+}
+.blue-violet {
+    background-color: #8A2BE2   ;
+}
+.blue {
+    background-color: blue;
+}
+.blue-green {
+    background-color: #0D98BA;
+}
+.green {
+    background-color: green ;
+}
+.yellow-green {
+    background-color: #9ACD32;
+}
+.white {
+    background-color: white;
+}
+.black {
+    background-color: black;
 }
