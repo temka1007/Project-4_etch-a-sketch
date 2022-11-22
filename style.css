@@ -1,6 +1,5 @@
 * {
     margin: 0px;
-    border: 1px solid green;
     padding: 0px;
 }
 body{
@@ -153,3 +152,7 @@ main {
     margin-left: 13px;
     background-color: red;
 }
+.cell {
+    border: 1px solid white;
+}
+
