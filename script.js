@@ -1,24 +1,48 @@
-const sketchPanel = document.querySelector(".sketch");
+const container = document.querySelector(".sketch");
+const redBtn = document.querySelector(".start");
+const inputValue = document.querySelector("input");
 
-const input = document.querySelector("input");
-const enter = document.querySelector(".enter");
 
+function initGame () {
+    const cellNumber = document.querySelector("input").value;
 
-function valueFetcher() {
-    
-    let rawFetchedValue = document.querySelector('input').value;
+    for(let i = 0; i < cellNumber**2; i++) {
+        const cell = document.createElement("div"); 
 
-    let fetchedValue = parseInt(rawFetchedValue);
+        container.style.cssText = `display: grid; grid-template-columns: repeat(${cellNumber}, 1fr);`;
 
-    if(16 <= fetchedValue && fetchedValue <= 64) {
-        return fetchedValue;
-    } else {
-        alert("Number between 16 to 64!");
+        container.appendChild(cell);
+    }
+}   
+initGame();
+
+function reset() {
+    while(container.firstChild) {
+        container.removeChild(container.lastChild);
     }
 }
 
-enter.addEventListener("click", () => {
-    const cellNumber = valueFetcher();
 
-    
+inputValue.addEventListener("input", (e) => {
+    let takenValue = e.target.value;
+    redBtn.textContent = `${takenValue}`;
+})
+
+function pixalChanger(value) {
+
+    for(let i = 0; i < value**2; i++) {
+        const cell = document.createElement("div"); 
+
+        container.style.cssText = `display: grid; grid-template-columns: repeat(${value}, 1fr);`;
+
+        container.appendChild(cell);
+    };
+}
+
+redBtn.addEventListener("click", () => {
+    reset();
+
+    let cellNumber = parseInt(redBtn.textContent);
+
+    pixalChanger(cellNumber);
 });

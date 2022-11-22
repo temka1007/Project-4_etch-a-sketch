@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    border: 1px solid green;
     padding: 0px;
 }
 body{
@@ -21,16 +22,15 @@ main {
     border-radius: 10px;
     
 }
-.sketch.container{
+.sketch-container{
     height: 600px;
     width: 600px;
     background-color: black;
     padding: 10px;
     border-radius: 10px;
-}
-.sketch {
-    height:100%;
-    background-color: rgb(122, 122, 122);
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .color {
     height: 20px;
@@ -76,21 +76,7 @@ main {
     border-radius: 0px 0px 10px 10px;
 
 }
-.pixal-changer {
-    display: flex; 
-    justify-content: center;
-}
-.enter {
-    cursor: pointer;
-    width: 160px;
-    height: 40px;
-    margin-left: 5px;
-}
-input {
-    margin-right: 5px;
-    width: 37px;
-    height: 36px;
-}
+
 .backgroundColor {
     cursor: pointer;
     height: 40px;
@@ -104,7 +90,10 @@ input {
     height: 40px;
 
 }
-
+.enter {
+    cursor: pointer;
+    height: 40px;
+}
 .yellow {
     background-color: yellow;
 }
@@ -146,4 +135,21 @@ input {
 }
 .black {
     background-color: black;
+}
+.sketch {
+    height: 600px;
+    width: 600px;
+    background-color: rgb(122, 122, 122);
+    
+
+}
+.pixal-changer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.start {
+    height: 40px;
+    width: 40px;
+    margin-left: 13px;
+    background-color: red;
 }
